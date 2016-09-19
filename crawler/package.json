@@ -1,0 +1,11 @@
+{
+  "name": "crawler",
+  "description": "crawler",
+  "version": "0.0.1",
+	"author": "Joel <iamjoel007@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "request": "2.75.0"
+  }
+}
