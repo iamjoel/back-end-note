@@ -9,7 +9,7 @@ const DOWNLOAD_PATH = 'download/'
 var resolvePathname = require('resolve-pathname')
 const MAX_PAGENUM = 5 // 1e5
 
-!fs.existsSync(DOWNLOAD_PATH) && fs.mkdirSync(DOWNLOAD_PATH)
+  !fs.existsSync(DOWNLOAD_PATH) && fs.mkdirSync(DOWNLOAD_PATH)
 
 // TODO 如何知道页面的编码？ charset
 
@@ -22,7 +22,10 @@ var startTime = Date.now()
 var endTime
 var downloadPageNum = 0
 var totalPageNum
-var nextFetchTime = 10e3
+var nextFetchTime = 5e3
+var notdownloadQueue = []
+var nowDownLoadNum = 0
+const PARALLEL_NUM = 20 //并行下载的数量
 
 request({
   url: BOOK_URL,
@@ -39,28 +42,52 @@ request({
     console.log(`一共${totalPageNum}章`)
     $pages.each(function(num) {
       var $currPage = $(this)
-      download($currPage.attr('href'), `${pad(num, MAX_PAGENUM)} ${$currPage.text()}`)
+      donwloadController($currPage.attr('href'), `${pad(num, MAX_PAGENUM)} ${$currPage.text()}`)
     })
   }
 })
 
+function donwloadController(url, name, failNum) {
+  notdownloadQueue.push({ url, name, failNum })
+  if (nowDownLoadNum <= PARALLEL_NUM) {
+    if(failNum > 0) {
+      console.log('重试。。。'+ notdownloadQueue.length)
+    }
+    downloadNext(failNum)
+  }
+}
+
+function downloadNext(failNum) {
+  if (notdownloadQueue.length === 0) {
+    return
+  }
+  var downloadParam = notdownloadQueue.shift()
+  if(failNum > 0) {
+    console.log(`第${failNum}次重新下载${res.name}`)
+  }
+  download(downloadParam.url, downloadParam.name, downloadParam.failNum)
+}
+
 function download(url, name, failNum) {
+  nowDownLoadNum++
+  console.log(`当前下载并行数量:${nowDownLoadNum}`)
   fetchAysn(url, name)
     .then((res) => {
       downloadPageNum++
+      nowDownLoadNum--
       downloadSucc(res)
+      downloadNext()
       if (downloadPageNum === totalPageNum) {
         endTime = Date.now()
         console.log(`总共用时${(endTime - startTime)/1000}秒`)
       }
     }, (res) => {
-      failNum = failNum || 0
+      var failNum = failNum || 0
       failNum++
-      nextFetchTime += 200
+      nextFetchTime += 1000
       if (failNum < 10) {
         setTimeout(() => {
-          console.log(`第${failNum}次重新下载${res.name} ${res.url}`)
-          download(res.url, res.name, failNum++)
+          donwloadController(res.url, res.name, failNum)
         }, nextFetchTime)
       } else {
         console.log(`下载失败：${res.name}`)
@@ -80,10 +107,20 @@ function fetchAysn(url, name) {
   return new Promise((resovle, reject) => {
     if (url.indexOf('http') !== 0) { // 是否是绝对路径
       url = resolvePathname(url, BOOK_URL) // 计算绝对路径
+      url = url
+      var ajaxReturned = false
+      // 超时处理
+      // setTimeout(function () {
+      //   if(!ajaxReturned){
+      //     reject({ url, name })
+      //   }
+      // }, 1000)
       request({
-        url: url,
-        encoding: null
+        url: url + '?v=' + Date.now(),
+        encoding: null,
+        // timeout: 1e3
       }, (error, response, body) => {
+        ajaxReturned = true
         if (error) {
           reject({ error, url, name })
           return
