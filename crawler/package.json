@@ -2,8 +2,12 @@
   "name": "crawler",
   "description": "crawler",
   "version": "0.0.1",
-  "author": "Joel <iamjoel007@gmail.com>",
   "private": true,
+  "author": "Joel <iamjoel007@gmail.com>",
+  "engines": {
+    "node": ">= 4",
+    "npm": ">= 2"
+  },
   "dependencies": {
     "cheerio": "0.22.0",
     "iconv-lite": "^0.4.13",
