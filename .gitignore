@@ -38,3 +38,5 @@ jspm_packages
 
 # download
 download
+
+.DS_Store
