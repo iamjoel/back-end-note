@@ -21,6 +21,12 @@
   * [power-assert](https://github.com/power-assert-js/power-assert) 断言库。
   * [SuperTest](https://github.com/visionmedia/supertest) 测试 HTTP 接口的断言工具库。
 
+## 微服务
+可以理解成商城，写的微服务的代码是上面的商品，由微服务框架来提供 路由，验证，写日志，限流等等功能。
+
+库：
+* [Kong](https://github.com/Kong/kong)
+* [notadd](https://github.com/notadd/notadd) 基于 [nest](https://github.com/nestjs/nest)。
 
 ## Demo
 * [爬取页面](crawler)
