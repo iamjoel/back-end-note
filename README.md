@@ -14,6 +14,7 @@
   * [typeorm](https://github.com/typeorm/typeorm)
   * [bookshelf](https://github.com/bookshelf/bookshelf)
   * [objection.js](https://github.com/Vincit/objection.js/) 轻量级ORM，基于 knex。
+* [jwt-simple](https://github.com/hokaccha/node-jwt-simple) JSON Web Token。
 * [node acl](https://github.com/OptimalBits/node_acl) 接口权限。
 * [parameter](https://github.com/node-modules/parameter) 参数验证。
 * 测试
