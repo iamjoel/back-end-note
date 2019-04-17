@@ -1,4 +1,4 @@
-# Node.js
+# Node.js 笔记
 ## 第三方库
 * 文件处理
   * [fs-extra](https://github.com/jprichardson/node-fs-extra) 文件操作工具库。支持给不存在的文件夹，文件写内容。
@@ -21,6 +21,12 @@
   * [Mocha](https://mochajs.org/) 测试框架。
   * [power-assert](https://github.com/power-assert-js/power-assert) 断言库。
   * [SuperTest](https://github.com/visionmedia/supertest) 测试 HTTP 接口的断言工具库。
+* 微信 [更多](https://github.com/node-webot)
+  * [Wechat API](https://github.com/node-webot/wechat-api) 微信公共平台API。
+  * [wechat-oauth](https://github.com/node-webot/wechat-oauth) [移动应用微信登录开发指南](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317851&token=&lang=zh_CN) OAuth 流程：
+    * 进入微信的oauth地址（服务器端也能提供接口），带Appid 和 scope(授权作用域)，获得code。 前端做(网页，app等)。
+    * 用 code,Appid,AppSecret 换 access_token。 服务器端做。
+    * 用 access_token 做拿用户信息等操作。 服务器端做。 access_token可能会过期，需要去刷新。
 
 ## 微服务
 可以理解成商城，写的微服务的代码是上面的商品，由微服务框架来提供 路由，验证，写日志，限流等等功能。
