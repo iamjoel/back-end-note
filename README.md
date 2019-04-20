@@ -14,6 +14,8 @@
   * [typeorm](https://github.com/typeorm/typeorm)
   * [bookshelf](https://github.com/bookshelf/bookshelf)
   * [objection.js](https://github.com/Vincit/objection.js/) 轻量级ORM，基于 knex。
+* 发 HTTP 请求
+  * [urllib](https://github.com/node-modules/urllib)
 * [jwt-simple](https://github.com/hokaccha/node-jwt-simple) JSON Web Token。
 * [node acl](https://github.com/OptimalBits/node_acl) 接口权限。
 * [parameter](https://github.com/node-modules/parameter) 参数验证。
@@ -27,6 +29,12 @@
     * 进入微信的oauth地址（服务器端也能提供接口），带Appid 和 scope(授权作用域)，获得code。 前端做(网页，app等)。
     * 用 code,Appid,AppSecret 换 access_token。 服务器端做。
     * 用 access_token 做拿用户信息等操作。 服务器端做。 access_token可能会过期，需要去刷新。
+* 工具库
+  * [utility](https://github.com/node-modules/utility) 支持Md5，sha1等加密算法，数字，字符串，日期工具方法等。
+  * [address](https://github.com/node-modules/address) 拿当前电脑的 ipv4，ipv6,MAC地址，DNS 服务器。
+  * [compressing](https://github.com/node-modules/compressing) 压缩，解压文件。支持 tar,gzip,tgz,zip。
+* 集合
+  * [node_modules](https://github.com/node-modules) 发现很多有趣的库。 [导航](http://node-modules.github.io/book/README.html)
 
 ## 微服务
 可以理解成商城，写的微服务的代码是上面的商品，由微服务框架来提供 路由，验证，写日志，限流等等功能。
