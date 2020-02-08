@@ -1,7 +1,11 @@
 # 后端笔记
 ## 语言
-* [Node.js](nodejs)
-* [Java](java)
+* [Node.js](language/nodejs)
+* [Java](language/java)
+
+## 数据库
+* [MySQL](database/mysql)
+* [Mongo](database/mongo)
 
 ## 其他
 * [后端概览](summary)
