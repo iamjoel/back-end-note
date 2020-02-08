@@ -1,0 +1,17 @@
+{
+  "name": "hapi-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hapi"
+  ],
+  "author": "Joel",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^16.6.2"
+  }
+}

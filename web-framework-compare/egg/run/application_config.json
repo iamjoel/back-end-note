@@ -1,0 +1,437 @@
+{
+  "config": {
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null
+    },
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "overwrite": true,
+      "signed": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function anonymous>"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-onerror/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-session/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-i18n/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-watcher/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-multipart/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-security/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-development/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-schedule/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-logrotator/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-static/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-jsonp/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-view/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/locales",
+        "/Users/jinweiqiang/Github/admin-server/egg/config/locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "multipart": {
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": true,
+        "useSession": false,
+        "ignoreJSON": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "matching": "<Function anonymous>"
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      }
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": true,
+      "reloadOnDebug": true
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/Users/jinweiqiang/Github/admin-server/egg/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000,
+      "files": "<LRU>"
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "view": {
+      "root": "/Users/jinweiqiang/Github/admin-server/egg/app/view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "env": "local",
+    "name": "egg-server",
+    "keys": "<String len: 15>",
+    "proxy": false,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "x-forwarded-host",
+    "pkg": {
+      "name": "egg-server",
+      "version": "1.0.0",
+      "main": "server.js",
+      "scripts": {
+        "dev": "egg-bin dev --port 8000"
+      },
+      "author": "JOel",
+      "license": "MIT",
+      "dependencies": {
+        "egg": "^1.9.0"
+      },
+      "devDependencies": {
+        "egg-bin": "^4.3.5"
+      }
+    },
+    "baseDir": "/Users/jinweiqiang/Github/admin-server/egg",
+    "HOME": "/Users/jinweiqiang",
+    "rundir": "/Users/jinweiqiang/Github/admin-server/egg/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 14191>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "100kb",
+      "jsonLimit": "100kb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "/Users/jinweiqiang/Github/admin-server/egg/logs/egg-server",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "DEBUG",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "egg-server-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": true,
+      "type": "application"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheMaxLength": 1000,
+      "dnsCacheMaxAge": 10000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "i18n",
+      "securities"
+    ],
+    "workerStartTimeout": 600000,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "responseTimeout": 60000
+    },
+    "coreMiddlewares": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "i18n",
+      "securities"
+    ],
+    "appMiddlewares": [],
+    "appMiddleware": [],
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 10485760,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-onerror",
+      "version": "1.5.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-session",
+      "version": "2.1.1"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-i18n",
+      "version": "1.2.0"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-watcher",
+      "version": "2.2.0"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-multipart",
+      "version": "1.5.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-security",
+      "version": "1.12.1"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-development",
+      "version": "1.3.1"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-schedule",
+      "version": "2.6.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-logrotator",
+      "version": "2.2.3"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-static",
+      "version": "1.4.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-jsonp",
+      "version": "1.2.1"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg/config/plugin.js",
+      "path": "/Users/jinweiqiang/Github/admin-server/egg/node_modules/egg-view",
+      "version": "1.1.2"
+    }
+  }
+}

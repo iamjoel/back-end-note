@@ -1,0 +1,16 @@
+{
+  "name": "egg-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "egg-bin dev --port 8000"
+  },
+  "author": "JOel",
+  "license": "MIT",
+  "dependencies": {
+    "egg": "^1.9.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.3.5"
+  }
+}
