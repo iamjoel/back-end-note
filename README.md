@@ -2,6 +2,8 @@
 ## 语言
 * [Node.js](language/nodejs)
 * [Java](language/java)
+* [Python](language/python)
+* [Go](language/go)
 
 ## 数据库
 * [MySQL](database/mysql)
