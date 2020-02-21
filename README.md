@@ -1,7 +1,6 @@
 # 后端笔记
 ## 语言
-[Node.js](language/nodejs)，[Java](language/java)，[Python](language/python)，[Go](language/go)，[Shell](language/shell)
-
+[Node.js](language/nodejs)，[Java](language/java)，[Python](language/python)，[Go](language/go)，[命令行](language/shell)
 
 ## 数据库
 [MySQL](database/mysql)，[Mongo](database/mongo)
