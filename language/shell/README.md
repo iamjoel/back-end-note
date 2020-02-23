@@ -1,5 +1,5 @@
 # Shell(命令行)
-* [Mac 命令行命令](mac/all.md)
+* [熟练使用 Mac OS 命令行，提高程序员生产力，你需要掌握这6组命令和技巧](mac)
 * [linux](linux.md)
 
 ## 资源
